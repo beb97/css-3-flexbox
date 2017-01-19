@@ -1,0 +1,36 @@
+li {color: #fff; padding: 10px; list-style: none; background: tomato}
+li:nth-child(2) {background: orange}
+li:nth-child(3) {background: #800000}
+li:nth-child(4) {background: #FF3399}
+li:nth-child(5) {background: #3399FF}
+
+.flex-test {
+  width: 80%;
+  outline: 1px solid #333;
+  background: #eee;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: row; /* row or column*/
+  flex-wrap: nowrap; /* wrap or nowrap / or reverse- */
+  /* AXE PRINCIPAL */
+  justify-content: space-around; /* flex-start flex-end center space-between space-around*/
+  /* AXE SECONDAIRE */
+  align-items: baseline; /* flex-start flex-end center baseline stretch  */
+
+
+}
+
+/* Gere la mise a ligne des éléments
+*/
+.flex-test:nth-of-type(1) {
+  flex-wrap: wrap;
+  margin: auto; /* cool aussi*/
+  order: 1; /* tri des élements, par poids from 0 to x */
+}
+
+.flex-test:nth-of-type(2) {
+  /* flex = raccourci pour les 3 suivants */
+flex-grow: 0; /* default:0 capacité pour un élément à s’étirer dans l’espace restant */
+flex-shrink: 1; /* default:1 capacité pour un élément à se contracter si nécessaire */
+flex-basis: auto; /* default:auto taille initiale de l’élément avant que l’espace restant ne soit distribué. */
+}
